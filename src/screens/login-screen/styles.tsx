@@ -43,12 +43,12 @@ export const styles = StyleSheet.create({
   },
   title: {
     fontSize: 34,
-    fontWeight: '700',
+    fontWeight: 'bold',
     color: '#000',
   },
   paragraph: {
     fontSize: 17,
-    fontWeight: '400',
+    fontWeight: 400,
     color: '#757281',
   },
   cancelText: {

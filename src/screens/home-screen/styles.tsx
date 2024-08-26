@@ -43,22 +43,22 @@ export const styles = StyleSheet.create({
   },
   text: {
     fontSize: 14,
-    fontWeight: '400',
+    fontWeight: 400,
     color: '#00000060',
   },
   name: {
     fontSize: 28,
-    fontWeight: '600',
+    fontWeight: 600,
     color: '#000000',
   },
   title: {
     fontSize: 22,
-    fontWeight: '600',
+    fontWeight: 600,
     color: '#000000',
   },
   paragraph: {
     fontSize: 18,
-    fontWeight: '400',
+    fontWeight: 400,
     color: '#2F50C1',
   },
   inputWrap: {
@@ -72,10 +72,9 @@ export const styles = StyleSheet.create({
   },
   input: {
     fontSize: 16,
-    fontWeight: '400',
+    fontWeight: 400,
     flex: 1,
     height: '100%',
-    color: '#000',
   },
   buttonFlex: {
     gap: 15,
@@ -98,7 +97,7 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 16,
-    fontWeight: '400',
+    fontWeight: 400,
     textTransform: 'capitalize',
     color: '#fff',
   },
@@ -186,7 +185,7 @@ export const styles = StyleSheet.create({
   },
   boldText: {
     fontSize: 18,
-    fontWeight: '700',
+    fontWeight: 700,
     color: '#000',
   },
 });

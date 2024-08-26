@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {Animated, Easing, Image, StatusBar, View} from 'react-native';
+import {Animated, Easing, Image, View} from 'react-native';
 import {styles} from './styles';
 import {useNavigation} from '@react-navigation/native';
 import {NavigationParams} from '../../navigation/type';
@@ -35,8 +35,8 @@ export const SplashScreen = () => {
           useNativeDriver: true,
         }),
         // Animated.timing(translateYAnim, {
-        //   toValue: -500,
-        //   duration: 2000,
+        //   toValue: -500, // Slide up by 200 pixels
+        //   duration: 2000, // 2 seconds to slide up
         //   easing: Easing.out(Easing.quad),
         //   useNativeDriver: true,
         // }),
@@ -51,36 +51,29 @@ export const SplashScreen = () => {
   }, []);
 
   return (
-    <>
-      <StatusBar
-        translucent
-        barStyle="light-content"
-        backgroundColor={'transparent'}
-      />
-      <View style={[styles.container, {backgroundColor}]}>
-        <Animated.View
-          style={[
-            styles.logoWrap,
-            {
-              transform: [
-                {scale: scaleAnim},
-                {
-                  skewX: rotateAnim.interpolate({
-                    inputRange: [0, 1],
-                    outputRange: ['0deg', '90deg'],
-                  }),
-                },
-                {translateY: translateYAnim},
-              ],
-              opacity: opacityAnim,
-            },
-          ]}>
-          <Image
-            source={require('../../../assets/icons/logo-icon.png')}
-            style={styles.logo}
-          />
-        </Animated.View>
-      </View>
-    </>
+    <View style={[styles.container, {backgroundColor}]}>
+      <Animated.View
+        style={[
+          styles.logoWrap,
+          {
+            transform: [
+              {scale: scaleAnim},
+              {
+                skewX: rotateAnim.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: ['0deg', '90deg'],
+                }),
+              },
+              {translateY: translateYAnim},
+            ],
+            opacity: opacityAnim,
+          },
+        ]}>
+        <Image
+          source={require('../../../assets/icons/logo-icon.png')}
+          style={styles.logo}
+        />
+      </Animated.View>
+    </View>
   );
 };
