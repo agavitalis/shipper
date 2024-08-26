@@ -9,6 +9,7 @@ import {LoginValidation} from './validation';
 import {useNavigation} from '@react-navigation/native';
 import {NavigationParams} from '../../navigation/type';
 import {useLoginMutation} from '../../store/authApi';
+import {ErrorToast, SuccessToast} from 'react-native-toast-message';
 
 export const LoginScreen = () => {
   const [showModal, setShowModal] = useState(false);
@@ -25,12 +26,13 @@ export const LoginScreen = () => {
       .then(res => {
         fadeOut();
         setShowModal(false);
+        SuccessToast({text1: 'Login successfully'});
         navigation.navigate('BottomTabs', {
           screen: 'HomeScreen',
           params: {userName: res.full_name},
         });
       })
-      .catch(err => console.log('err', err));
+      .catch(() => ErrorToast({text1: 'Invalid username or password'}));
   };
 
   const {values, touched, errors, handleSubmit, handleChange} = useFormik({

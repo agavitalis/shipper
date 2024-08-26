@@ -48,7 +48,7 @@ export const styles = StyleSheet.create({
   },
   paragraph: {
     fontSize: 17,
-    fontWeight: 400,
+    fontWeight: '400',
     color: '#757281',
   },
   cancelText: {
