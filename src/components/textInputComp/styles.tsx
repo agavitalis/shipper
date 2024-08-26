@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     elevation: 4,
     position: 'absolute',
     top: 7,
-    left: 15,
+    left: 18,
   },
   error: {
     marginTop: 5,

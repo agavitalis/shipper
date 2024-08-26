@@ -40,24 +40,24 @@ export const styles = StyleSheet.create({
     width: '100%',
     flexWrap: 'wrap',
     fontSize: 18,
-    fontWeight: 600,
+    fontWeight: '600',
     color: '#000',
   },
   title: {
     fontSize: 16,
-    fontWeight: 400,
+    fontWeight: '400',
     textTransform: 'capitalize',
     color: '#3F395C',
   },
   paragraph: {
     fontSize: 13,
-    fontWeight: 400,
+    fontWeight: '400',
     textTransform: 'capitalize',
     color: '#757281',
   },
   coloredText: {
     fontSize: 11,
-    fontWeight: 500,
+    fontWeight: '500',
     color: '#4561DB',
   },
   header: {
@@ -65,7 +65,7 @@ export const styles = StyleSheet.create({
   },
   statusCard: {
     fontSize: 11,
-    fontWeight: 500,
+    fontWeight: '500',
     paddingVertical: 4,
     paddingHorizontal: 6,
     borderRadius: 5,
@@ -76,7 +76,7 @@ export const styles = StyleSheet.create({
   },
   statusCardText: {
     fontSize: 11,
-    fontWeight: 500,
+    fontWeight: '500',
     textTransform: 'capitalize',
     color: 'pink',
   },
@@ -139,7 +139,7 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 16,
-    fontWeight: 500,
+    fontWeight: '500',
     textTransform: 'capitalize',
     color: '#fff',
   },
